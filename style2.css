@@ -1,0 +1,51 @@
+:root {
+	--primary-color: #00c9d9;
+	--secondary-color: #fe0d6d;
+    --box-shadow-standard: 4px 5px 10px #000000d0;
+}
+
+h1 {
+    font-size: calc(2.5rem + 1.5vw) !important;
+}
+
+.font-color-secondary {
+    color: var(--secondary-color);
+}
+
+.fs-7 {
+    font-size: calc(1rem * 0.85) !important;
+}
+
+.hover-text-secondary:hover {
+    color: var(--secondary-color) !important;
+    transition: 0.25s;
+}
+
+
+.general-padding {
+    padding: 0 2vw;
+}
+
+.general-width {
+    max-width: 80rem;
+}
+
+
+.general-background {
+	background: linear-gradient(to bottom right, #000 40%, var(--primary-color) 80%);
+}
+
+.circle {
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+
+.stat {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(calc(var(--i) * 120deg));
+    background: #fff;
+    padding: 10px;
+    border-radius: 50%;
+}
