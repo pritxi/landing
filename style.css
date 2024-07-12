@@ -2,6 +2,7 @@
 	--primary-color: #00c9d9;
 	--secondary-color: #fe0d6d;
 	--secondary-light-color: #ff4992;
+    --third-color: #ffc52f;
     --dark-color: #22252b;
     --box-shadow-standard: 4px 5px 10px #000000d0;
 	--radius: 250px;
@@ -66,7 +67,9 @@ h1 {
 }
 
 .general-background {
-	background: linear-gradient(to bottom right, #000 40%, var(--primary-color) 80%);
+	/* background: linear-gradient(to bottom right, #000 40%, var(--primary-color) 80%); */
+	background: linear-gradient(to bottom, var(--primary-color) 85%, white);
+    /* background-color: var(--primary-color); */
 }
 
 .dark-background {
@@ -76,7 +79,6 @@ h1 {
 .primary-background {
 	background: linear-gradient(to bottom, var(--primary-color),  #000 80%);
 }
-
 
 
 .btn--animateglowPink {
@@ -114,6 +116,30 @@ h1 {
 	initial-value: 0turn;
 }
 
+/* Accordion */
+.accordion-item {
+    border: none !important;
+    border-bottom: 1px solid rgb(209, 209, 209) !important;
+}
+
+.accordion-button {
+    padding-left: 0 !important;
+}
+
+/* Navbar */
+
+.navbar-style {
+    padding: 8px 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* Header */
+
+header div.general-padding {
+    padding-top: 10rem;
+}
+
 .circles {
     width: 350px;
 }
@@ -146,7 +172,7 @@ h1 {
 .stat div {
     animation: float 2s ease-in-out infinite;
     width: 160px;
-    background-color: white;
+    background-color: var(--third-color);
     border-radius: 20px;
     height: 200px;
 }
@@ -195,14 +221,14 @@ h1 {
     padding: 6px 25px 7px !important;
 	border-radius: 20px !important;
     background-color: transparent !important;
-    color: var(--secondary-color) !important;
-    border: 1.5px var(--secondary-color) solid !important;
+    color: white !important;
+    border: 1.5px white solid !important;
 }
 
 .btn-secondary:hover {
     color: white !important;
-    background-color: var(--primary-color) !important;
-    border: var(--primary-color) solid 1.5px !important;
+    background-color: var(--third-color) !important;
+    border: var(--third-color) solid 1.5px !important;
     transition: 0.6s;
 }
 
@@ -285,6 +311,9 @@ h1 {
     .circles {
         width: 400px;
     }
+    header div.general-padding {
+        padding-top: 14rem;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -294,6 +323,9 @@ h1 {
     .circles {
         width: 500px;
     }
+    header div.general-padding {
+        padding-top: 14rem;
+    }
 }
 
 @media (min-width: 1400px) {
@@ -302,5 +334,8 @@ h1 {
     }
     .circles {
         width: 500px;
+    }
+    header div.general-padding {
+        padding-top: 14rem;
     }
 }
