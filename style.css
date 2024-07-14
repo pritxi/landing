@@ -8,6 +8,10 @@
 	--radius: 250px;
 }
 
+* {
+    color: rgb(59, 53, 53);
+}
+
 @keyframes float {
 	0% {
 		box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
@@ -58,6 +62,10 @@ h1 {
 
 /* Background styles */
 
+.main {
+    background-color: #cbf8fc;
+}
+
 .general-padding {
     padding: 0 2vw;
 }
@@ -68,7 +76,7 @@ h1 {
 
 .general-background {
 	/* background: linear-gradient(to bottom right, #000 40%, var(--primary-color) 80%); */
-	background: linear-gradient(to bottom, var(--primary-color) 85%, white);
+	/* background: linear-gradient(to right bottom, var(--primary-color), white);*/
     /* background-color: var(--primary-color); */
 }
 
@@ -85,7 +93,7 @@ h1 {
 	--border-size: 6px;
 	--border-angle: 0turn;
 
-	background-image: conic-gradient(
+	/*background-image: conic-gradient(
 			from var(--border-angle),
 			var(--primary-color),
 			var(--primary-color) 20%,
@@ -96,7 +104,7 @@ h1 {
 			transparent 20%,
 			var(--secondary-color),
 			transparent
-		);
+		);*/
 	background-size: calc(100% - (var(--border-size) * 2))
 			calc(100% - (var(--border-size) * 2)),
 		cover;
@@ -130,7 +138,7 @@ h1 {
 
 .navbar-style {
     padding: 8px 10px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.98);
     border-radius: 10px;
 }
 
@@ -201,6 +209,12 @@ header div.general-padding {
 	color: #fff;
 }
 
+/* Statistics */
+.statistics-pritxi {
+    min-width: 200px;
+    width: 20%;
+    background-color: white;
+}
 
 /* Buttons */
 
