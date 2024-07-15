@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="static/css/font-awesome.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
@@ -29,10 +29,10 @@
             <div class="collapse navbar-collapse justify-content-center" style="width: inherit;" id="navbarSupportedContent">
                 <ul class="navbar-nav mb-lg-0 gap-2 gap-lg-5">
                     <li class="nav-item">
-                        <a class="nav-link active text-secondary-color fw-bolder" aria-current="page" href="#">Inicio</a>
+                        <a class="nav-link active font-color-primary " aria-current="page" href="#">Inicio</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-secondary-color fw-bolder" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle font-color-primary" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Servicios
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -43,33 +43,31 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-secondary-color fw-bolder" href="#">Nosotros</a>
+                        <a class="nav-link font-color-primary" href="#">Nosotros</a>
                     </li>
                 </ul>
             </div>
             <div class="collapse navbar-collapse justify-content-end">
                 <ul class="navbar-nav mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link btn btn-primary btn-effect btn-effect-2" aria-current="page" href="#" title="Contáctanos">Contáctanos</a>
+                        <a class="nav-link btn btn-secondary width-max-content" aria-current="page" href="#" title="Contáctanos">Inicia tu transformación</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
     <!--Header-->
-    <header class="general-background"  style="min-height: 100vh;">
+    <header class="general-background">
         <div class="btn--animateglowPink p-1"  >
-            <div class="general-padding general-background" style="min-height: 100vh;">
+            <div class="general-padding general-background">
                 <div class="container pb-5">
                     <div class="row mx-auto general-width">
-                        <div class="col-12 col-lg-6">
+                        <div class="col-12 col-lg-6 wow animate__animated animate__fadeInLeft">
                             <!-- Contenido a la izquierda -->
-                            <a class="text-decoration-none border border-1 rounded-pill py-2 px-4 mb-0 fs-7 text-black hover-text-secondary hover-border-secondary" href="#">
-                                Conoce más sobre nosotros
-                                <i class="fal fa-angle-right"></i>
-                            </a>
-                            <h1 class=" mt-5 mb-4">
-                                <span class="font-color-secondary">Transformamos</span> tu visión en una <span class="font-color-secondary">realidad digital</span>
+                            <p class="tag-text">Tu aliado en...</p>
+                            <h1 class=" mt-4 mb-4">
+                                <span class="font-color-primary">Transformamos</span> tu visión en una <span class="font-color-primary">realidad digital</span>
                                 <div>
                                     <a class="btn btn-primary btn-effect btn-effect-2" href="">Contáctanos</a>
                                     <a class="btn btn-secondary" href="#">Diagnóstico de bajo precio</a>
@@ -85,23 +83,41 @@
         </div>
     </header>
     
-    <section class="py-5">
+    <section class="py-5 primary-background">
         <div class="container">
-            <h2 class="text-center">¿Cómo impactamos?</h2>
+            
+            <p class="mx-auto tag-text">Tu aliado en...</p>
+            <h2 class="text-center">¿Qué ofrecemos?</h2>
+            <h5 class="mx-auto mt-3 w-50 text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi cupiditate tenetur laudantium inventore</h5>
             <div class="d-flex flex-wrap justify-content-center pt-5" style="gap: 80px;">
                 <div class="statistics-pritxi">Hola</div>
                 <div class="statistics-pritxi">Hola</div>
                 <div class="statistics-pritxi">Hola</div>
 
-
             </div>
         </div>
     </section>
     
+    <section class="py-5 text-end">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-6"></div>
+                <div class="col-6">
+                    <p class="tag-text ms-auto">Tu aliado en...</p>
+                    <h2 class="">Entendemos tus necesidades</h2>
+                    <h5 class="mt-3">Explora Nuestras Soluciones: Preguntas Comunes sobre Consultoría y Tecnología</h5>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="py-5">
-        <div class="container">
+        <div class="container py-5">
             <div class="row">
                 <div class="col-6">
+                    <p class="tag-text">Tu aliado en...</p>
                     <h2 class="">¿Cómo potenciar mi empresa con Pritxi?</h2>
                     <h5 class="mt-3">Explora Nuestras Soluciones: Preguntas Comunes sobre Consultoría y Tecnología</h5>
                     <div class="accordion mt-5" id="accordionExample">
@@ -130,6 +146,10 @@
                             </div>
                         </div>
                     </div>
+                    <div class="mt-3">
+                        <a class="nav-link btn btn-primary width-max-content" aria-current="page" href="#" title="Contáctanos">Inicia tu transformación</a>
+                    </div>
+
                 </div>
                 <div class="col-6"></div>
             </div>
@@ -137,21 +157,59 @@
     </section>
 
     
-    <section class="dark-background py-5">
+    <section class="primary-background py-5">
+        <div class="container text-center text-white d-flex flex-wrap justify-content-center gap-3">
+            <p class="mb-0 fs-1">4%</p>
+            <p class="mb-0 fs-1">4%</p>
+            <p class="mb-0 fs-1">4%</p>
+            <p class="mb-0 fs-1">4%</p>
+        </div>
+    </section>
+
+    
+    <section class="py-5">
         <div class="container text-center text-white">
-            <h2 class="">¡Transfórmate hoy!</h2>
+            <h2 class="wow animate__animated animate__fadeIn ">¡Transfórmate hoy!</h2>
             <h5 class="m-auto w-33">Desata tu potencial digital. ¡Escríbenos hoy para recibir un análisis de tu madurez digital y traza el camino hacia el éxito digital!</h4>
         </div>
     </section>
 
-    <section>
-    </section>
-    
+    <footer class="container-fluid">
+        <div class="row align-items-center py-4">
+            <div class="col-md-6 col-lg-4 px-5">
+                <img src="" alt="">
+                <p class="text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit repudiandae deserunt eos voluptate soluta molestias quos dolorum officiis dolores quisquam? Nihil rerum blanditiis officia dolores similique corporis, asperiores facere obcaecati.</p>
+            </div>
+            <div class="col-md-6 col-lg-4 px-5">
+                <p class="text-white">Síguenos en nuestras redes</p>
+                <a href="" target="_blank"><i class="mx-2 fab fa-whatsapp fs-3"></i></a>
+                <a href="https://t.me/Omegacontacto" target="_blank"><i class="fs-3 mx-2 fab fa-linkedin"></i></a>
+            </div>
+            <div class="col-lg-4 px-5 mt-3">
+                <a href=""><p class="text-white">Términos y condiciones</p></a>
+                <p class="text-white mt-1">Copyright © Pritxi Solutions 2024 - Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
 
-
+</div>
 </main>
+
 
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous"></script>    
+    <script>
+        wow = new WOW(
+          {
+          boxClass:     'wow',      // default
+          animateClass: 'animated', // default
+          offset:       0,          // default
+          mobile:       false,       // default
+          live:         true        // default
+        }
+        )
+        wow.init();
+    </script>
 </body>
 </html>

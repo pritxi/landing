@@ -9,3 +9,4 @@ window.addEventListener('scroll', function() {
 
     navbar.style.marginTop = newMargin + 'px'; // Aplica el nuevo margen
 });
+
