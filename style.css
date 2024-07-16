@@ -1,9 +1,9 @@
 :root {
-	--primary-color: #63c1c5;
-	--secondary-color: #1f69b2;
+	--primary-color: #5FC6CE;
+	--secondary-color: #4396C9;
 	--secondary-light-color: #bbd9eb;
-    --third-color: #3d97cd;
-    --dark-color: #22252b;
+    --third-color: #166AB9;
+    --dark-color: #023463;
     --box-shadow-standard: 4px 5px 10px #000000d0;
 	--radius: 250px;
 }
@@ -250,7 +250,7 @@ header div.general-padding {
 
 /* Footer */
 footer {
-    background-color: var(--secondary-color) !important;
+    background-color: var(--dark-color) !important;
 }
 
 /* Buttons */

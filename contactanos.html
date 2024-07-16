@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="icon" type="image/x-icon" href="static/img/PRITXI-Fondo-Blanco.ico">
+    <link rel="stylesheet" href="static/css/font-awesome.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <main class="main">
+    <!--Navbar-->
+    <nav id="mainNavbar" style="margin-top: 40px;" class="px-3 fixed-top navbar navbar-expand-md navbar-light container">
+
+        <div class="whatsapp-link position-fixed">
+            <a class="mx-auto" target="_blank" href="#"><i class="text-white fab fa-whatsapp"></i></a>
+        </div>
+
+        <div class="container-fluid general-width navbar-style shadow-sm">
+            <a class="navbar-brand" href="index.html">
+                <img style="height: 30px;" src="static/img/PRITXI - Fondo Blanco.svg" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon text-white"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" style="width: inherit;" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-lg-0 gap-2 gap-lg-3">
+                    <li class="nav-item">
+                        <a class="nav-link active font-color-primary " aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle font-color-primary" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Servicios
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-color-primary" href="nosotros.html">Nosotros</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-secondary width-max-content" aria-current="page" href="#" title="Contáctanos">Inicia tu transformación</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Header-->
+    <header class="general-background">
+        <div class="btn--animateglowPink p-1"  >
+            <div class="general-padding general-background">
+                <div class="container pb-5">
+                    <div class="row mx-auto general-width">
+                        <div class="col-12 col-lg-6 wow animate__animated animate__fadeInLeft">
+                            <!-- Contenido a la izquierda -->
+                            <p class="tag-text">Tu aliado en...</p>
+                            <h1 class=" mt-4 mb-4">
+                                <span class="font-color-primary">Transformamos</span> tu visión en una <span class="font-color-primary">realidad digital</span>
+                            </h1>
+                            <p class="fs-6 lh-lg">Te ayudamos a diseñar el futuro de tu empresa con estrategias innovadoras y soluciones a medida</p>
+                        </div>
+                        <div class="col-12 col-lg-6 mt-lg-0 mt-5 pb-5 mb-5 position-relative text-center d-flex">
+                            <form id="hubspotForm">
+                                <label for="email">Correo:</label>
+                                <input class="form-control" type="email" id="email" name="email" required>
+                                <label for="firstName">Nombre:</label>
+                                <input class="form-control" type="text" id="firstName" name="firstName">
+                                <label for="lastName">Apellidos:</label>
+                                <input class="form-control" type="text" id="lastName" name="lastName">
+                                <label for="message">Mensaje:</label>
+                                <textarea class="form-control" id="message" name="message"></textarea>
+                                <button type="submit">Enviar</button>
+                              </form>
+                            <script>
+                                document.getElementById('hubspotForm').addEventListener('submit', function(event) {
+                                  event.preventDefault(); // Evita que el formulario se envíe de manera tradicional
+                              
+                                  var formData = new FormData(this);
+                                  var data = {
+                                    properties: [
+                                      { property: 'email', value: formData.get('email') },
+                                      { property: 'firstname', value: formData.get('firstName') },
+                                      { property: 'lastname', value: formData.get('lastName') },
+                                      { property: 'message', value: formData.get('message') }
+                                    ]
+                                  };
+                              
+                                  fetch('https://api.hubapi.com/contacts/v1/contact/?hapikey=YOUR_ACCESS_TOKEN', {
+                                    method: 'POST',
+                                    headers: {
+                                      'Content-Type': 'application/json'
+                                    },
+                                    body: JSON.stringify(data)
+                                  })
+                                  .then(response => response.json())
+                                  .then(data => {
+                                    console.log('Success:', data);
+                                    alert('Formulario enviado exitosamente.');
+                                  })
+                                  .catch((error) => {
+                                    console.error('Error:', error);
+                                    alert('Hubo un error al enviar el formulario.');
+                                  });
+                                });
+                              </script>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+
+    <footer class="container-fluid">
+        <div class="row align-items-center py-4">
+            <div class="col-md-6 col-lg-4 px-5">
+                <img src="static/img/PRITXI - White Fondo Dark.svg" alt="">
+                <p class="text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit repudiandae deserunt eos voluptate soluta molestias quos dolorum officiis dolores quisquam? Nihil rerum blanditiis officia dolores similique corporis, asperiores facere obcaecati.</p>
+            </div>
+            <div class="col-md-6 col-lg-4 px-5">
+                <p class="text-white">Síguenos en nuestras redes</p>
+                <a href="" target="_blank"><i class="mx-2 fab fa-whatsapp fs-3 text-white"></i></a>
+                <a href="" target="_blank"><i class="fs-3 mx-2 fab fa-linkedin text-white"></i></a>
+            </div>
+            <div class="col-lg-4 px-5 mt-3">
+                <a href=""><p class="text-white">Términos y condiciones</p></a>
+                <p class="text-white mt-1">Copyright © Pritxi Solutions 2024 - Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+</div>
+</main>
+
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous"></script>    
+    <script>
+        wow = new WOW(
+          {
+          boxClass:     'wow',      // default
+          animateClass: 'animated', // default
+          offset:       0,          // default
+          mobile:       false,       // default
+          live:         true        // default
+        }
+        )
+        wow.init();
+    </script>
+</body>
+</html>
