@@ -8,6 +8,8 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Asegura permisos de escritura para el contenido del repositorio
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
