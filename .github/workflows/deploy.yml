@@ -12,22 +12,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build project
-        run: npm run build  # Si tienes un script de build, de lo contrario, omite esta línea
+      - name: Inject API Key
+        run: echo "window.__HUBSPOT_API_KEY__ = '${{ secrets.HUBSPOT_API_KEY }}';" > api-key.js
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public  # O el directorio donde esté tu proyecto
-
-      - name: Inject API Key
-        run: echo "window.__HUBSPOT_API_KEY__ = '${{ secrets.HUBSPOT_API_KEY }}';" > public/api-key.js
+          publish_dir: ./  # Publica desde el directorio raíz si usas GitHub Pages directamente desde el repositorio
