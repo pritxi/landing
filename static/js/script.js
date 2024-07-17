@@ -1,5 +1,4 @@
 window.addEventListener('scroll', function() {
-    console.log("sdf")
     var navbar = document.getElementById('mainNavbar');
     var maxScroll = 100; // Máxima cantidad de scroll antes de que el margen sea mínimo
     var maxMargin = 40; // Márgen superior máximo en píxeles

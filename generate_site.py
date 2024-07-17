@@ -16,11 +16,6 @@ pages = [
     {'template': 'servicios.html', 'output': 'servicios.html', 'title': 'Servicios'},
 ]
 
-# Borra los archivos estáticos antiguos en la raíz (si existen)
-if os.path.exists('static'):
-    shutil.rmtree('static')
-shutil.copytree('static', 'static')
-
 # Genera cada página
 for page in pages:
     template = env.get_template(page['template'])
