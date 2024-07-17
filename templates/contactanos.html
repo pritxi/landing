@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <!--Header-->
+    <header class="general-background primary-background">
+        <div class="btn--animateglowPink p-1"  >
+            <div class="general-padding general-background">
+                <div class="container pb-5">
+                    <div class="row mx-auto general-width">
+                        <div class="col-12 col-lg-6 wow animate__animated animate__fadeInLeft">
+                            <!-- Contenido a la izquierda -->
+                            <p class="tag-text">Tu aliado en...</p>
+                            <h2 class=" mt-4 mb-4">
+                                Una solución dedicada a empresas que buscan <span class="font-color-primary">crecer digitalmente</span>
+                            </h2>
+                            <p class="fs-6 lh-lg">Te ayudamos a diseñar el futuro de tu empresa con estrategias innovadoras y soluciones a medida</p>
+                        </div>
+                        <div class="col-12 col-lg-6 mt-lg-0 pb-5 mb-5 mt-5 px-md-5">
+                            <form id="contact-form">
+                                <div class="general-form shadow-sm">
+                                    <h4>¿Cómo podemos ayudarte?</h4>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="email">Correo</label>
+                                        <input class="form-control" type="email" id="email" name="email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="firstName">Nombre Completo</label>
+                                        <input class="form-control" type="text" id="firstName" name="firstName">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="company">Empresa</label>
+                                        <input class="form-control" type="text" id="company" name="company">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="message">Mensaje</label>
+                                        <textarea class="form-control" id="message" name="message"></textarea>
+                                    </div>
+                                    <button class="btn btn-primary" type="submit">Conversemos</button>
+                                </div>
+                            </form>
+                            <script src="api-key.js"></script>
+                            <script src="hs-form-sent.js"></script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+{% endblock %}
