@@ -16,10 +16,10 @@ pages = [
     {'template': 'servicios.html', 'output': 'servicios.html', 'title': 'Servicios'},
 ]
 
-# Copia los archivos estáticos al directorio de salida
-if os.path.exists('output/static'):
-    shutil.rmtree('output/static')
-shutil.copytree('static', 'output/static')
+# Borra los archivos estáticos antiguos en la raíz (si existen)
+if os.path.exists('static'):
+    shutil.rmtree('static')
+shutil.copytree('static', 'static')
 
 # Genera cada página
 for page in pages:
@@ -27,6 +27,6 @@ for page in pages:
     output_from_parsed_template = template.render(title=page['title'], static_url=static_url)
 
     # Guarda el resultado en el archivo de salida
-    output_path = os.path.join('output', page['output'])
+    output_path = page['output']
     with open(output_path, 'w', encoding='utf-8') as fh:
         fh.write(output_from_parsed_template)
